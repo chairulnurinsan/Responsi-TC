@@ -62,11 +62,11 @@ docker build -t website-utama .
 ```
 ## Jalankan Container Website-profil
 ```
-docker run -d --name website-profil --network my-salvina-network -p 8081:80 website-profil
+docker run -d --name website-profil --network my-chairul-network -p 8081:80 website-profil
 ```
 ## Jalankan Container Website-utama
 ```
-docker run -d --name cont_utama --network my-salvina-network -p 8080:80 website-utama
+docker run -d --name cont_utama --network my-chairul-network -p 8080:80 website-utama
 ```
  # Hasil Saat Dijalankan
 ![Website Utama](website-utama.png)
