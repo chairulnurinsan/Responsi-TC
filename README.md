@@ -20,11 +20,11 @@ cd website-utama
 </head>
 <body>
     <h1>Data Diri</h1>
-    <p>Nama Lengkap: Salvina Salsabilla</p>
-    <p>NIM: 215610081</p>
+    <p>Nama Lengkap: Chairul Nur'Insan</p>
+    <p>NIM: 215610049</p>
     <p>Program Studi: Sistem Informasi</p>
-    <p>Hobi: Membaca, Menulis, dan Bersepeda</p>
-    <a href="https://4f0aa670-e00e-4e00-999b-50f18a93408c-10-244-8-107-8081.papa.r.killercoda.com/">Profil</a>
+    <p>Hobi: Main Game, Petualangan</p>
+    <a href="https://f71e3b4c-8d00-4510-b251-31757d7f81a8-10-244-8-222-8081.papa.r.killercoda.com/">Profil</a>
 </body>
 </html>
 ```
@@ -39,7 +39,7 @@ cd website-utama
 </head>
 <body>
     <h1>Profil</h1>
-    <img src="foto.jpg" alt="Foto Profil" style="width:200px;">
+    <img src="foto.jpg" alt="Foto Profil" style="width:400px;">
 </body>
 </html>
 ```
@@ -49,17 +49,15 @@ FROM nginx:latest
 COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
-## Di dalam website-profil, letakkan file gambar profil Anda (foto.jpg).
+## Membuat jaringan my-namamahasiswa-network
 ```
-wget -O ~/website-profil/foto.jpg
+docker network create my-chairul-network
 ```
-## Membuat network my-namamahasiswa-network
+## Build Image 
 ```
-docker network create my-salvina-network
-```
-## Build Image website-profil dan website-utama
-```
+website-profil
 docker build -t website-profil .
+website-utama
 docker build -t website-utama .
 ```
 ## Jalankan Container Website-profil
@@ -72,6 +70,6 @@ docker run -d --name cont_utama --network my-salvina-network -p 8080:80 website-
 ```
 # Hasil Saat Dijalankan
 - Website-Utama
-  ![image](https://github.com/salpina/RESPONSI-TC/assets/168054744/343b13e2-20fc-4603-908e-4586da0d9dd3)
+ 
 - Website-Profil
-  ![image](https://github.com/salpina/RESPONSI-TC/assets/168054744/2ce61f16-1312-4fac-aeef-480a272595e7)
+ 
